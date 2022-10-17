@@ -1,4 +1,5 @@
 #include<bits/stdc++.h>
+// #include<iostream>
 using namespace std;
 
 // print all subsequences of the given array
@@ -28,8 +29,10 @@ void util(int index, vector<int>& tmp_arr, int n, vector<int>& arr){
 }
 
 int main() {
-	vector<int> arr{3, 2, 1};
-	int n = arr.size();
+	int a[] = { 10, 20, 30 };
+    int n = sizeof(a) / sizeof(a[0]);
+	vector<int> arr(a, a + n);
+
 	vector<int> tmp_arr;
 	util(0,  tmp_arr, n, arr);
 	
