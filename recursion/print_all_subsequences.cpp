@@ -23,8 +23,8 @@ void util(int index, vector<int>& tmp_arr, int n, vector<int>& arr){
 	
 	tmp_arr.push_back(arr[index]); // take
 	util(index+1, tmp_arr, n, arr); 
-	tmp_arr.pop_back();
-	util(index+1, tmp_arr, n, arr); // not take
+	tmp_arr.pop_back(); // not take
+	util(index+1, tmp_arr, n, arr); 
 	
 }
 
