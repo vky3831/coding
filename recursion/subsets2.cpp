@@ -43,6 +43,7 @@ vector<vector<int> > subsets(vector<int>& nums) {
     int ind = 0;
     vector<int> ds;
     vector<vector<int> > ans;
+    sort(nums.begin(), nums.end());
     util(ind, nums, ans, ds);
     return ans;
 }
