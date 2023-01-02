@@ -61,18 +61,6 @@ void print(vector<int>& vect){
 	cout<<"]"<<endl;
 }
 
-// void print(vector<string>& vect){
-// 	cout<<"[";
-// 	int n = vect.size();
-// 	for(int i=0; i < n; i++){
-		
-// 		cout<<vect[i];
-// 		if(i < n-1)
-// 		cout<<", ";
-// 	}
-// 	cout<<"]"<<endl;
-// }
-
 void print(vector<vector<int> >& vect){
 	int n = vect.size();
     for(int i=0; i<n; i++){
