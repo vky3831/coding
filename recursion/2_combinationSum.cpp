@@ -1,4 +1,8 @@
 /*
+
+g++ 2_combinationSum.cpp
+./a.exe
+
 39. Combination Sum
 
 Given an array of distinct integers candidates and a target integer target, return a list of all unique combinations of candidates where the chosen numbers sum to target. You may return the combinations in any order.
@@ -24,10 +28,11 @@ void print(vector<int>& vect);
 void print(vector<vector<int> >& vect);
 
 void util(int ind, int target, vector<int>& tmp_arr, vector<vector<int> >& ans, vector<int>& candidates, int n){
+    if(target == 0){
+        ans.push_back(tmp_arr);
+        return;        
+    }
     if(ind == n){
-        if(target == 0){
-            ans.push_back(tmp_arr);
-        }
         return;
     }
 

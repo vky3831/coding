@@ -3,6 +3,8 @@
 using namespace std;
 
 // print all subsequences of the given array
+// g++ 1_print_all_subsequences.cpp
+// ./a.exe
 
 void print(vector<int>& tmp_arr){
 	cout<<"[";

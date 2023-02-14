@@ -1,4 +1,7 @@
 /*
+g++ 4_subsetSums.cpp
+./a.exe
+
 Given a list arr of N integers, print sums of all subsets in it.
 
 Input:
