@@ -31,7 +31,7 @@ void util(int index, vector<int>& tmp_arr, int n, vector<int>& arr){
 }
 
 int main() {
-	int a[] = { 10, 20, 30 };
+	int a[] = { 10, 20, 30, 40 };
     int n = sizeof(a) / sizeof(a[0]);
 	vector<int> arr(a, a + n);
 
