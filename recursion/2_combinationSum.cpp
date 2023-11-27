@@ -1,7 +1,7 @@
 /*
 
 g++ 2_combinationSum.cpp
-./a.exe
+a.exe
 
 39. Combination Sum
 
