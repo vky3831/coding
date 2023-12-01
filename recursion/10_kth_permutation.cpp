@@ -34,6 +34,10 @@ Constraints:
 
 1 <= n <= 9
 1 <= k <= n!
+
+Explaination:
+https://leetcode.com/problems/permutation-sequence/solutions/2502436/c-100-fastest-solution-best-approach-with-good-explanation-easy-to-understand-1/
+
 */
 #include<bits/stdc++.h>
 #include <string>
