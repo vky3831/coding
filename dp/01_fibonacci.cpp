@@ -1,6 +1,10 @@
 /*
 g++ 01_fibonacci.cpp
-./a.exe
+a.exe OR ./a.exe
+
+for mac: 
+clang++ 01_fibonacci.cpp
+./a.out
 */
 
 #include<bits/stdc++.h>
