@@ -23,7 +23,7 @@ int fibo(int n){
 int main(){
     int n = 4;
     int ans = fibo(n);
-    cout<<ans;
+    cout<<ans<<endl;
 }
 
 void print(vector<int>& vect){
