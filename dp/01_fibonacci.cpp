@@ -13,16 +13,40 @@ using namespace std;
 void print(vector<int>& vect);
 void print(vector<vector<int> >& vect);
 
-int fibo(int n){
+int fibo_rec(int n, vector<int>& dp){
     if(n == 0) return 0;
     if(n == 1) return 1;
+    if(dp[n] != -1) return dp[n];
 
-    return fibo(n-1) + fibo(n-2);
+    return dp[n] = fibo_rec(n-1, dp) + fibo_rec(n-2, dp);
 }
+
+int fibo_memo(int n, vector<int>& dp){
+    if(n == 0) return 0;
+    if(n == 1) return 1;
+    if(dp[n] != -1) return dp[n];
+
+    return dp[n] = fibo_memo(n-1, dp) + fibo_memo(n-2, dp);
+}
+
+int fibo_tab(int n){
+    vector<int> dp(n+1);
+    dp[0] = 0;
+    dp[1] = 1;
+
+    for(int i=2; i<=n; i++){
+        dp[i] = dp[i-1] + dp[i-2];
+    }
+
+    return dp[n];
+}
+
 
 int main(){
     int n = 4;
-    int ans = fibo(n);
+    vector<int> dp(n+1, -1);
+    // int ans = fibo_memo(n, dp);
+    int ans = fibo_tab(n);
     cout<<ans<<endl;
 }
 
