@@ -1,3 +1,5 @@
+
+
 /*
 g++ 04_max_non_adj_sum.cpp
 a.exe OR ./a.exe
@@ -6,11 +8,12 @@ for mac:
 clang++ 05_max_non_adj_sum.cpp
 ./a.out
 
-Given an array of ‘N’  positive integers, we need to return the maximum sum of the subsequence such that no two elements of the subsequence are adjacent elements in the array.
+A thief needs to rob money in a street. The houses in the street are arranged in a circular manner. 
+Therefore the first and the last house are adjacent to each other. 
+The security system in the street is such that if adjacent houses are robbed, the police will get notified.
+Given an array of integers “Arr'' which represents money at each house, we need to return the maximum amount of money that the thief can rob without alerting the police.
 
-Note: A subsequence of an array is a list with elements of the array where some elements are deleted ( or not deleted at all) and the elements should be in the same order in the subsequence as in the array.
-
-Link: https://takeuforward.org/data-structure/maximum-sum-of-non-adjacent-elements-dp-5/
+Link: https://takeuforward.org/data-structure/dynamic-programming-house-robber-dp-6/
 
 */
 
@@ -55,11 +58,15 @@ int maxNonAdjSum_memo(int ind, vector<int>& elements, vector<int>& dp){
 
     int pick = elements[ind];
     if(ind-2 >= 0){
-        pick += maxNonAdjSum_memo(ind-2, elements, dp);
+        pick += maxNonAdjSum_memo(ind-2, elements);
     }
-    int notPick = maxNonAdjSum_memo(ind-1, elements, dp);
+    int notPick = maxNonAdjSum_memo(ind-1, elements);
 
     return dp[ind] = max(pick, notPick);
+}
+
+int houseRobber(vector<int>& elements){
+    // PENDING
 }
 
 int main(){
@@ -70,8 +77,9 @@ int main(){
     vector<int> dp(n, -1);
 
     // int ans = maxNonAdjSum_rec(n-1, elements);
-    int ans = maxNonAdjSum_memo(n-1, elements, dp);
+    // int ans = maxNonAdjSum_memo(n-1, elements, dp);
     // int ans = maxNonAdjSum_tab(elements);
+    houseRobber(elements)
 
     cout<<ans<<endl;
 }
